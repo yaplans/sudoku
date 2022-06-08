@@ -39,7 +39,7 @@
                     <div
                         v-for="i in colors"
                         class="m-inline"
-                        @click="currentColor=i"
+                        @click="currentColor=i,currentDigit=''"
                     >
                         <div class="m-td"
                             :class="i"
@@ -58,7 +58,7 @@
                 <div
                     v-for="i in div_dig"
                     class="m-inline"
-                    @click="currentDigit=i"
+                    @click="currentDigit=i,currentColor=''"
                 >
                     <div class="m-td"
                     >{{i}}</div>
