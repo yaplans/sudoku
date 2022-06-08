@@ -1,3 +1,7 @@
+html{
+    font-family: auto;
+    line-height:normal;
+}
 #main{
     /* Зададим размер шрифта в зависимости от минимального размера экрана */
     /* Дальше будем плясать от этого размера используя em */
@@ -16,7 +20,7 @@ td{
     /* font-size: 8vmin; */
     text-align: center;
     border: 1px solid slategray;
-    /* padding: 6px; */
+    padding: 0px;
 }
 .m-td{
     /* width: 9vmin;
@@ -55,6 +59,7 @@ td{
 table{
     /* убрать пробелы между ячейками */
     border-collapse: collapse;
+    width: auto;
 }
 /* #_main{
     display: inline-flex;

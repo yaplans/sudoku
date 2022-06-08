@@ -69,7 +69,11 @@ var vue = new Vue({
                     this.rows[x][y].color=this.currentColor;
                 }
             }
+        },
+        modalShow: function(){
+            M.Modal.init(document.getElementById('modal_files')).open();
         }
+
     },
 });
 console.log("Hi!");
