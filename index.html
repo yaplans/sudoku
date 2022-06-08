@@ -24,7 +24,7 @@
                                 :y="c.y"
                                 :class="c.color"
                                 @mouseover="setCoordinates(c.x,c.y)"
-                                @click="c.v=currentDigit;c.color=currentColor"
+                                @click='setCellValue(c.x,c.y)'
                             >
                                 <div class="">
                                     {{c.v}}
@@ -39,7 +39,7 @@
                     <div
                         v-for="i in colors"
                         class="m-inline"
-                        @click="currentColor=i,currentDigit=''"
+                        @click="currentColor=i;currentDigit=''"
                     >
                         <div class="m-td"
                             :class="i"
@@ -47,7 +47,7 @@
                     </div>
                     <div
                         class="m-inline"
-                        @click="currentDigit='',currentColor=''"
+                        @click="currentDigit='';currentColor=''"
                     >
                         <div class="m-td"
                         >X</div>

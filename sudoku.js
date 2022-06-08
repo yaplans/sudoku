@@ -48,11 +48,28 @@ var vue = new Vue({
     },
     methods:{
         setCoordinates: function(x,y){
-            console.log(x);
-            console.log(y);
+            // console.log(x);
+            // console.log(y);
             this.currentX=x;
             this.currentY=y;
         },
+        setCellValue: function(y,x){
+            if(this.currentDigit!=""){
+                if (this.rows[x][y].v==this.currentDigit) {
+                    this.rows[x][y].v="";
+                } else {
+                    this.rows[x][y].v=this.currentDigit;
+                }
+            }
+            
+            if(this.currentColor!=""){
+                if (this.rows[x][y].color==this.currentColor) {
+                    this.rows[x][y].color="";
+                } else {
+                    this.rows[x][y].color=this.currentColor;
+                }
+            }
+        }
     },
 });
 console.log("Hi!");
